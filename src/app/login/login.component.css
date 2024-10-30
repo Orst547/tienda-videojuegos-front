@@ -1,0 +1,29 @@
+.login-container {
+  max-width: 400px;
+  margin: 100px auto; /* Centrar verticalmente */
+  padding: 20px;
+  background-color: #5f6a75; /* Fondo claro */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-title {
+  text-align: center;
+  color: #333; /* Color de texto oscuro */
+  font-family: 'Arial', sans-serif; /* Fuente más simple */
+  margin-bottom: 20px; /* Espaciado inferior */
+}
+
+.form-field {
+  width: 100%;
+  margin-bottom: 16px; /* Espaciado entre campos */
+}
+
+button {
+  width: 100%; /* Botón ocupa todo el ancho */
+  font-weight: bold; /* Texto del botón en negrita */
+}
+
+mat-form-field {
+  border-radius: 4px; /* Bordes redondeados */
+}

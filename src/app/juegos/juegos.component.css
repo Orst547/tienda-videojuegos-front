@@ -1,0 +1,17 @@
+.juegos-container {
+  max-width: 800px; /* Puedes ajustar el ancho según tu diseño */
+  margin: 0 auto; /* Centra el contenedor */
+}
+
+.juegos-list {
+  max-height: 400px; /* Altura máxima que desees */
+  overflow-y: auto; /* Permite el desplazamiento vertical */
+  border: 1px solid #ccc; /* Añade un borde para visualización */
+  padding: 10px; /* Espaciado interno */
+  margin-top: 20px; /* Espaciado superior */
+}
+
+/* Estilos opcionales para cada carta de juego */
+.juego-card {
+  margin-bottom: 20px; /* Espaciado entre cartas */
+}

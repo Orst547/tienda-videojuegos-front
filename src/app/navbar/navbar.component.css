@@ -1,0 +1,21 @@
+.navbar {
+  padding: 10px 20px; /* Añade más espacio alrededor */
+}
+
+.title {
+  font-size: 24px; /* Aumenta el tamaño del texto del título */
+  font-weight: bold; /* Hace que el texto sea más destacado */
+  color: #fff; /* Color blanco para el texto */
+}
+
+.spacer {
+  flex: 1; /* Empuja los botones a la derecha */
+}
+
+.nav-button {
+  margin-left: 15px; /* Espacio entre botones */
+}
+
+.mat-toolbar {
+  
+}

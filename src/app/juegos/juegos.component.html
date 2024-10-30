@@ -1,0 +1,23 @@
+<div class="juegos-container">
+  <h1>Lista de Juegos</h1>
+
+  <div *ngIf="juegos.length === 0" class="no-juegos">
+    <p>No hay juegos disponibles.</p>
+  </div>
+
+  <div class="juegos-list">
+    <div *ngFor="let juego of juegos" class="juego-card">
+      <mat-card>
+        <img mat-card-image src="assets/images/{{ juego.imagen }}" alt="{{ juego.nombre }}">
+        <mat-card-title>{{ juego.nombre }}</mat-card-title>
+        <mat-card-subtitle>Precio: ${{ juego.precio }}</mat-card-subtitle>
+        <mat-card-content>
+          <p>{{ juego.descripcion }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <!-- Aquí puedes agregar botones o enlaces -->
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

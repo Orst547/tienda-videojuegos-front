@@ -1,0 +1,16 @@
+<mat-toolbar class="navbar">
+  <span class="title">Mi Tienda de Videojuegos</span>
+  <span class="spacer"></span>
+  <button *ngIf="isAdmin()" mat-raised-button (click)="Admin()">Administrar</button>
+
+  <button (click)="Home()" mat-raised-button>Home</button>
+  <!-- Botón para Login/Logout -->
+   <label >Bienvenido {{ nombre }}</label>
+  <button *ngIf="isLoggedIn()" mat-raised-button (click)="logout()">Logout</button>
+  <button *ngIf="!isLoggedIn()" mat-raised-button (click)="Login()">Login</button>
+  <button *ngIf="!isLoggedIn()" mat-raised-button (click)="Registro()">Registrate</button>
+</mat-toolbar>
+
+
+<router-outlet></router-outlet>
+

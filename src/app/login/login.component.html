@@ -1,0 +1,28 @@
+<div class="login-container">
+  <h2>Iniciar Sesión</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Correo</mat-label>
+        <input matInput formControlName="correo" type="email" />
+        <mat-error *ngIf="loginForm.get('correo')?.invalid && loginForm.get('correo')?.touched">
+          <small *ngIf="loginForm.get('correo')?.errors?.['required']">El correo es requerido.</small>
+          <small *ngIf="loginForm.get('correo')?.errors?.['email']">Formato de correo inválido.</small>
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Contraseña</mat-label>
+        <input matInput formControlName="contrasena" type="password" />
+        <mat-error *ngIf="loginForm.get('contrasena')?.invalid && loginForm.get('contrasena')?.touched">
+          <small *ngIf="loginForm.get('contrasena')?.errors?.['required']">La contraseña es requerida.</small>
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <button mat-raised-button type="submit" [disabled]="loginForm.invalid">Iniciar Sesión</button>
+    <button mat-raised-button (click)="Registro()">Registro</button>
+  </form>
+</div>

@@ -1,0 +1,34 @@
+<div class="registro-container">
+  <h2>Registro de Usuario</h2>
+  <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput id="nombre" formControlName="nombre" type="text" />
+      <mat-error *ngIf="registroForm.get('nombre')?.invalid && registroForm.get('nombre')?.touched">
+        <small *ngIf="registroForm.get('nombre')?.errors?.['required']">El nombre es requerido.</small>
+        <small *ngIf="registroForm.get('nombre')?.errors?.['maxlength']">Máximo 100 caracteres.</small>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Correo</mat-label>
+      <input matInput id="correo" formControlName="correo" type="email" />
+      <mat-error *ngIf="registroForm.get('correo')?.invalid && registroForm.get('correo')?.touched">
+        <small *ngIf="registroForm.get('correo')?.errors?.['required']">El correo es requerido.</small>
+        <small *ngIf="registroForm.get('correo')?.errors?.['email']">Formato de correo inválido.</small>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Contraseña</mat-label>
+      <input matInput id="contrasena" formControlName="contrasena" type="password" />
+      <mat-error *ngIf="registroForm.get('contrasena')?.invalid && registroForm.get('contrasena')?.touched">
+        <small *ngIf="registroForm.get('contrasena')?.errors?.['required']">La contraseña es requerida.</small>
+        <small *ngIf="registroForm.get('contrasena')?.errors?.['minlength']">Mínimo 6 caracteres.</small>
+      </mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="registroForm.invalid">Registrar</button>
+    <button mat-raised-button color="primary" (click)="Logearse()">Logueate</button>
+  </form>
+</div>
