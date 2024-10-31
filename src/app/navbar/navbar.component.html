@@ -6,7 +6,7 @@
   <button *ngIf="isAdmin()" mat-raised-button color="accent" (click)="Admin()">Administrar</button>
   <button mat-raised-button color="accent" (click)="Home()">Home</button>
 
-  <label class="welcome-message">Bienvenido, {{ nombre }}</label>
+  <button class="welcome-message" mat-raised-button>Bienvenido, {{ nombre }}</button>
 
   <button *ngIf="isLoggedIn()" mat-raised-button color="warn" (click)="logout()">Logout</button>
   <button *ngIf="!isLoggedIn()" mat-raised-button color="primary" (click)="Login()">Login</button>
