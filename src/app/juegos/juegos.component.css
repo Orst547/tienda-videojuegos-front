@@ -69,13 +69,13 @@ mat-card-title {
 }
 
 mat-card-subtitle {
-  color: rgb(255, 255, 255); /* Dark color for price */
+  color: rgb(17, 114, 24); /* Dark color for price */
   font-size: 1.1em; /* Slightly larger font size for price */
 }
 
 mat-card-content {
   font-size: 14px; /* Adjust font size for content */
-  color: rgb(252, 252, 252); /* Darker color for content text */
+  color: rgb(0, 0, 0); /* Darker color for content text */
   line-height: 1.5; /* Better line spacing for readability */
 }
 
