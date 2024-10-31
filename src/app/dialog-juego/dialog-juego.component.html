@@ -1,34 +1,42 @@
 <h2 mat-dialog-title>{{ isEditMode ? 'Editar Juego' : 'Agregar Juego' }}</h2>
 <mat-dialog-content>
-  <form [formGroup]="juegoForm">
-    <mat-form-field appearance="fill">
-      <mat-label>Nombre</mat-label>
-      <input matInput formControlName="nombre" required>
-      <mat-error *ngIf="juegoForm.get('nombre')?.invalid && juegoForm.get('nombre')?.touched">
-        El nombre es requerido.
-      </mat-error>
-    </mat-form-field>
+  <form [formGroup]="juegoForm" class="form-container">
+    <div class="form-group">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="nombre" required>
+        <mat-error *ngIf="juegoForm.get('nombre')?.invalid && juegoForm.get('nombre')?.touched">
+          El nombre es requerido.
+        </mat-error>
+      </mat-form-field>
+    </div>
 
-    <mat-form-field appearance="fill">
-      <mat-label>Descripción</mat-label>
-      <textarea matInput formControlName="descripcion" required></textarea>
-      <mat-error *ngIf="juegoForm.get('descripcion')?.invalid && juegoForm.get('descripcion')?.touched">
-        La descripción es requerida.
-      </mat-error>
-    </mat-form-field>
+    <div class="form-group">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Descripción</mat-label>
+        <textarea matInput formControlName="descripcion" required></textarea>
+        <mat-error *ngIf="juegoForm.get('descripcion')?.invalid && juegoForm.get('descripcion')?.touched">
+          La descripción es requerida.
+        </mat-error>
+      </mat-form-field>
+    </div>
 
-    <mat-form-field appearance="fill">
-      <mat-label>Precio</mat-label>
-      <input matInput formControlName="precio" type="number" required>
-      <mat-error *ngIf="juegoForm.get('precio')?.invalid && juegoForm.get('precio')?.touched">
-        El precio es requerido y debe ser mayor que 0.
-      </mat-error>
-    </mat-form-field>
+    <div class="form-group">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Precio</mat-label>
+        <input matInput formControlName="precio" type="number" required>
+        <mat-error *ngIf="juegoForm.get('precio')?.invalid && juegoForm.get('precio')?.touched">
+          El precio es requerido y debe ser mayor que 0.
+        </mat-error>
+      </mat-form-field>
+    </div>
 
-    <mat-form-field appearance="fill">
-      <mat-label>Imagen (opcional)</mat-label>
-      <input matInput formControlName="imagen" type="text">
-    </mat-form-field>
+    <div class="form-group">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Imagen (opcional)</mat-label>
+        <input matInput formControlName="imagen" type="text">
+      </mat-form-field>
+    </div>
   </form>
 </mat-dialog-content>
 <mat-dialog-actions>

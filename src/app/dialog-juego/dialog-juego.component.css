@@ -1,8 +1,69 @@
-.caja {
-  margin: 15px;
+.form-container {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px; /* Increased spacing between form groups */
+}
+
 .full-width {
-  width: 100%;
-  margin-bottom: 16px;
-  margin: 20px
+  width: 100%; /* Ensures the input fields take full width */
+}
+
+.mat-form-field {
+  width: 100%; /* Makes sure the fields are full width */
+}
+
+.mat-form-field.mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: #f9f9f9; /* Light background for input fields */
+  border-radius: 4px;
+}
+
+.mat-form-field-appearance-fill .mat-label {
+  color: #555; /* Darker label color */
+}
+
+.mat-form-field-appearance-fill .mat-input-element {
+  color: #333; /* Dark input text color */
+}
+
+.mat-error {
+  color: #f44336; /* Red error color */
+}
+
+mat-dialog-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  min-width: 100px; /* Minimum button width */
+}
+
+button.mat-button {
+  background-color: #f0f0f0; /* Light background for cancel button */
+  color: #333; /* Dark text for cancel button */
+}
+
+button.mat-button:hover {
+  background-color: #e0e0e0; /* Darker background on hover for cancel button */
+}
+
+button.mat-button.color-primary {
+  background-color: #1976d2; /* Primary button color */
+  color: white; /* White text for primary button */
+}
+
+button.mat-button.color-primary:hover {
+  background-color: #1565c0; /* Darker primary button color on hover */
 }

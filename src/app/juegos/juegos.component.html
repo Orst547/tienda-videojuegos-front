@@ -7,8 +7,10 @@
 
   <div class="juegos-list">
     <div *ngFor="let juego of juegos" class="juego-card">
-      <mat-card>
+      <div class="juego-image-container">
         <img mat-card-image src="assets/images/{{ juego.imagen }}" alt="{{ juego.nombre }}">
+      </div>
+      <mat-card>
         <mat-card-title>{{ juego.nombre }}</mat-card-title>
         <mat-card-subtitle>Precio: ${{ juego.precio }}</mat-card-subtitle>
         <mat-card-content>

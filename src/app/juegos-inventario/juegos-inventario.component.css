@@ -2,17 +2,17 @@
 .juegos-container {
   max-width: 800px;
   margin: 40px auto;
-  padding: 20px;
-  background: #ffffff;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: box-shadow 0.3s ease;
+  padding: 30px; /* Aumentado el padding para un mejor espaciado */
+  background: #ffffff; /* Fondo blanco */
+  border-radius: 15px; /* Bordes más redondeados */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  overflow: hidden; /* Evitar el desbordamiento */
+  transition: box-shadow 0.3s ease; /* Suave transición de sombra */
 }
 
 /* Efecto hover en el contenedor */
 .juegos-container:hover {
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra más intensa al pasar el ratón */
 }
 
 /* Encabezado */
@@ -22,90 +22,93 @@
   align-items: center;
   margin-bottom: 20px;
   padding: 10px 0;
-  border-bottom: 2px solid #f0f0f0;
+  border-bottom: 2px solid #f0f0f0; /* Sutil línea de separación */
 }
 
 .header h2 {
   margin: 0;
-  font-size: 26px;
-  font-weight: 700;
-  color: #3f51b5;
+  font-size: 28px; /* Aumentado el tamaño del encabezado */
+  font-weight: 700; /* Peso de fuente en negrita */
+  color: #3f51b5; /* Color del texto */
+  text-transform: uppercase; /* Mayúsculas para mayor impacto */
+  letter-spacing: 0.5px; /* Espaciado de letras para claridad */
 }
 
 /* Tabla */
 table {
   width: 100%;
   border-spacing: 0;
-  border-collapse: collapse;
+  border-collapse: collapse; /* Colapsar bordes de la tabla */
 }
 
 mat-header-cell, mat-cell {
-  padding: 14px 18px;
-  text-align: left;
-  border-bottom: 1px solid #e0e0e0;
-  font-size: 16px;
-  color: #424242;
+  padding: 16px 20px; /* Padding ajustado para mejor espaciado */
+  text-align: left; /* Alineación a la izquierda */
+  border-bottom: 1px solid #e0e0e0; /* Línea divisoria en la tabla */
+  font-size: 16px; /* Tamaño de fuente uniforme */
+  color: #424242; /* Color de texto */
 }
 
 /* Estilos para el encabezado de la tabla */
 mat-header-cell {
-  background-color: #3f51b5;
-  color: #ffffff;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  background-color: #3f51b5; /* Fondo azul oscuro */
+  color: #ffffff; /* Color blanco para el texto */
+  font-weight: 600; /* Peso de fuente seminegrita */
+  text-transform: uppercase; /* Mayúsculas */
+  letter-spacing: 0.5px; /* Espaciado de letras */
 }
 
+/* Estilo de fila */
 mat-row {
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
 }
 
 mat-row:hover {
-  background-color: #f5f7fa;
-  transform: scale(1.01);
+  background-color: #f5f7fa; /* Color de fondo en hover */
+  transform: scale(1.01); /* Ligera escalación al pasar el ratón */
 }
 
 /* Acciones */
 .actions button {
-  margin-right: 8px;
+  margin-right: 12px; /* Espacio aumentado entre botones */
 }
 
 button[mat-icon-button] {
-  color: #3f51b5;
-  transition: transform 0.2s, color 0.3s;
+  color: #3f51b5; /* Color de icono */
+  transition: transform 0.2s, color 0.3s; /* Transición suave */
 }
 
 button[mat-icon-button]:hover {
-  transform: scale(1.1);
-  color: #303f9f;
+  transform: scale(1.1); /* Escalado en hover */
+  color: #1e88e5; /* Color más claro al pasar el ratón */
 }
 
 button[mat-fab] {
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el botón FAB */
+  transition: box-shadow 0.3s ease; /* Suave transición de sombra */
 }
 
 button[mat-fab]:hover {
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
 }
 
 /* Responsive */
 @media (max-width: 600px) {
   .header h2 {
-    font-size: 20px;
+    font-size: 22px; /* Ajuste del tamaño de la fuente en pantallas pequeñas */
   }
 
   button[mat-fab] {
-    width: 40px;
-    height: 40px;
+    width: 48px; /* Aumento en el tamaño del botón FAB */
+    height: 48px; /* Aumento en el tamaño del botón FAB */
   }
 
   mat-icon {
-    font-size: 20px;
+    font-size: 22px; /* Aumento del tamaño de los iconos */
   }
 
   mat-header-cell, mat-cell {
-    padding: 10px 12px;
-    font-size: 14px;
+    padding: 12px 15px; /* Ajuste del padding para dispositivos pequeños */
+    font-size: 14px; /* Tamaño de fuente reducido */
   }
 }
