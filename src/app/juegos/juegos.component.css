@@ -1,17 +1,87 @@
+/* Main container */
+/* Fondo de la página */
+body {
+  background: url('../../assets/images/game.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif; /* Cambia la fuente si deseas */
+}
+
 .juegos-container {
-  max-width: 800px; /* Puedes ajustar el ancho según tu diseño */
-  margin: 0 auto; /* Centra el contenedor */
+  max-width: 800px;
+  margin: 40px auto; /* Added top margin for better spacing */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px; /* Slightly increased border-radius */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Added transform for hover effect */
 }
 
+/* Hover effect on container */
+.juegos-container:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+/* Style for the games list header */
+.juegos-header {
+  margin-top: 20px; /* Adjust this value for desired spacing */
+  font-size: 26px; /* Slightly increased font size */
+  color: #3f51b5; /* Primary color */
+  text-align: center; /* Center the text */
+  font-weight: bold; /* Bold for emphasis */
+}
+
+/* List of games */
 .juegos-list {
-  max-height: 400px; /* Altura máxima que desees */
-  overflow-y: auto; /* Permite el desplazamiento vertical */
-  border: 1px solid #ccc; /* Añade un borde para visualización */
-  padding: 10px; /* Espaciado interno */
-  margin-top: 20px; /* Espaciado superior */
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 8px;
+  background-color: #fafafa;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-/* Estilos opcionales para cada carta de juego */
+/* Custom scrollbar for games list */
+.juegos-list::-webkit-scrollbar {
+  width: 8px; /* Width of scrollbar */
+}
+
+.juegos-list::-webkit-scrollbar-thumb {
+  background-color: #b0bec5; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Rounded edges */
+}
+
+.juegos-list::-webkit-scrollbar-thumb:hover {
+  background-color: #90a4ae; /* Darker thumb on hover */
+}
+
+/* Style for each game card */
 .juego-card {
-  margin-bottom: 20px; /* Espaciado entre cartas */
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the card */
+.juego-card:hover {
+  transform: translateY(-5px); /* Slight upward movement on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+}
+
+/* Styles for titles and details within each card */
+.juego-card h3 {
+  font-size: 22px; /* Increased font size for visibility */
+  color: #3f51b5; /* Primary color */
+  margin: 0 0 8px; /* Added bottom margin for spacing */
+}
+
+.juego-card p {
+  font-size: 15px; /* Increased font size for better readability */
+  color: #757575; /* Grey color for text */
+  margin: 0; /* Removed margin */
 }

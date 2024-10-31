@@ -1,16 +1,62 @@
+/* Registration container */
 .registro-container {
   max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 50px auto;
+  padding: 35px 25px; /* Ajustado el padding para mejor distribución */
+  background: rgba(255, 255, 255, 0.9); /* Fondo ligeramente translúcido */
+  border-radius: 20px; /* Esquinas más suaves */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3); /* Sombra más marcada para mayor profundidad */
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease; /* Transición más suave */
 }
 
+/* Hover effect for the registration container */
+.registro-container:hover {
+  transform: translateY(-8px); /* Efecto de elevación más notable */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada en hover */
+}
+
+/* Form field styles */
 mat-form-field {
   width: 100%;
+  margin-bottom: 25px; /* Espaciado mejorado */
 }
 
+/* Button styles */
 button {
-  margin-top: 20px;
+  margin-top: 25px;
   width: 100%;
+  padding: 16px; /* Mejor tamaño para una mayor área de clic */
+  font-size: 17px; /* Tamaño de texto mejorado */
+  font-weight: bold;
+  color: #ffffff; /* Texto en blanco */
+  background-color: #007BFF; /* Azul */
+  border: none;
+  border-radius: 10px; /* Esquinas más suaves */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect for button */
+button:hover {
+  background-color: #0056b3; /* Azul más oscuro */
+  transform: scale(1.08); /* Efecto de escala más notable */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); /* Sombra ligeramente más grande en hover */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 480px) {
+  .registro-container {
+    margin: 20px auto;
+    padding: 25px; /* Ajuste de padding para pantallas pequeñas */
+  }
+  
+  button {
+    font-size: 15px; /* Texto del botón más pequeño en pantallas pequeñas */
+  }
+  
+  /* Additional styling for form fields on small screens */
+  mat-form-field {
+    margin-bottom: 18px; /* Espaciado reducido para pantallas pequeñas */
+  }
 }

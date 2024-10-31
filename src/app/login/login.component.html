@@ -1,8 +1,9 @@
 <div class="login-container">
   <h2>Iniciar Sesión</h2>
   <form [formGroup]="loginForm" (ngSubmit)="login()">
-    <div>
-      <mat-form-field appearance="fill">
+    <!-- Campo de Correo -->
+    <div class="form-field">
+      <mat-form-field appearance="fill" class="full-width">
         <mat-label>Correo</mat-label>
         <input matInput formControlName="correo" type="email" />
         <mat-error *ngIf="loginForm.get('correo')?.invalid && loginForm.get('correo')?.touched">
@@ -12,8 +13,9 @@
       </mat-form-field>
     </div>
 
-    <div>
-      <mat-form-field appearance="fill">
+    <!-- Campo de Contraseña -->
+    <div class="form-field">
+      <mat-form-field appearance="fill" class="full-width">
         <mat-label>Contraseña</mat-label>
         <input matInput formControlName="contrasena" type="password" />
         <mat-error *ngIf="loginForm.get('contrasena')?.invalid && loginForm.get('contrasena')?.touched">
@@ -22,7 +24,10 @@
       </mat-form-field>
     </div>
 
-    <button mat-raised-button type="submit" [disabled]="loginForm.invalid">Iniciar Sesión</button>
-    <button mat-raised-button (click)="Registro()">Registro</button>
+    <!-- Botones -->
+    <div class="button-group">
+      <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid">Iniciar Sesión</button>
+      <button mat-raised-button color="accent" type="button" (click)="Registro()">Registro</button>
+    </div>
   </form>
 </div>

@@ -1,29 +1,74 @@
+/* Fondo de la página */
+body {
+  background: url('../../assets/images/game.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal */
 .login-container {
   max-width: 400px;
-  margin: 100px auto; /* Centrar verticalmente */
-  padding: 20px;
-  background-color: #5f6a75; /* Fondo claro */
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.login-title {
+  margin: 100px auto;
+  padding: 40px 30px;
+  background: rgba(255, 255, 255, 0.9); /* Blanco translúcido */
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Sombra en negro */
   text-align: center;
-  color: #333; /* Color de texto oscuro */
-  font-family: 'Arial', sans-serif; /* Fuente más simple */
-  margin-bottom: 20px; /* Espaciado inferior */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Efecto de expansión 3D en hover */
+.login-container:hover {
+  transform: perspective(800px) rotateX(0deg) rotateY(0deg) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Sombra más intensa en negro */
+}
+
+/* Título del formulario */
+h2 {
+  color: #0d47a1; /* Azul oscuro */
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Estilos de campos de formulario */
 .form-field {
+  margin-bottom: 20px;
+}
+
+.full-width {
   width: 100%;
-  margin-bottom: 16px; /* Espaciado entre campos */
 }
 
-button {
-  width: 100%; /* Botón ocupa todo el ancho */
-  font-weight: bold; /* Texto del botón en negrita */
+/* Botones */
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-mat-form-field {
-  border-radius: 4px; /* Bordes redondeados */
+button[mat-raised-button] {
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  max-width: 180px;
+  color: #ffffff; /* Texto en blanco */
+  background-color: #1e88e5; /* Azul medio */
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect for button */
+button[mat-raised-button]:hover {
+  background-color: #1565c0; /* Azul más oscuro en hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra en negro */
+}
+
+button[mat-raised-button]:disabled {
+  background-color: rgba(30, 136, 229, 0.12); /* Azul claro translúcido */
+  color: rgba(0, 0, 0, 0.26); /* Texto en negro claro */
 }

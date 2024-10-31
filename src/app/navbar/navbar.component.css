@@ -1,21 +1,53 @@
+/* Navbar styles */
 .navbar {
-  padding: 10px 20px; /* Añade más espacio alrededor */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between title and buttons */
+  padding: 15px 20px; /* Increased padding for better spacing */
+  background-color: #3f3f3f; /* Dark background for contrast */
+  box-shadow: 0 2px 8px rgba(241, 241, 241, 0.877); /* Subtle shadow for depth */
 }
 
+/* Title styles */
 .title {
-  font-size: 24px; /* Aumenta el tamaño del texto del título */
-  font-weight: bold; /* Hace que el texto sea más destacado */
-  color: #fff; /* Color blanco para el texto */
+  font-size: 28px; /* Increased font size for better visibility */
+  font-weight: bold; /* Emphasized title */
+  color: #fff; /* White text for contrast */
 }
 
+/* Spacer for flexible button alignment */
 .spacer {
-  flex: 1; /* Empuja los botones a la derecha */
+  flex: 1; /* Pushes buttons to the right */
 }
 
+/* Navigation button styles */
 .nav-button {
-  margin-left: 15px; /* Espacio entre botones */
+  margin-left: 25px; /* Increased space between buttons */
+  padding: 12px 20px; /* Increased padding for better touch targets */
+  font-size: 16px; /* Consistent font size */
+  color: #ffffff; /* White text for visibility */
+  background-color: #007BFF; /* Light blue background */
+  border: 2px solid transparent; /* Border for hover effect */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  cursor: pointer; /* Pointer cursor on hover */
 }
 
-.mat-toolbar {
-  
+/* Hover effect for navigation buttons */
+.nav-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  border-color: #ffffff; /* White border on hover */
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .title {
+    margin-bottom: 10px; /* Space between title and buttons */
+  }
 }

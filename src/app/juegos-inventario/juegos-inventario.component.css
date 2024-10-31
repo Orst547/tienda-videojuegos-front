@@ -1,26 +1,38 @@
+/* Contenedor principal */
 .juegos-container {
   max-width: 800px;
   margin: 40px auto;
   padding: 20px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
 }
 
+/* Efecto hover en el contenedor */
+.juegos-container:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Encabezado */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  padding: 10px 0;
+  border-bottom: 2px solid #f0f0f0;
 }
 
 .header h2 {
   margin: 0;
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 26px;
+  font-weight: 700;
   color: #3f51b5;
 }
 
+/* Tabla */
 table {
   width: 100%;
   border-spacing: 0;
@@ -28,41 +40,56 @@ table {
 }
 
 mat-header-cell, mat-cell {
-  padding: 12px 16px;
+  padding: 14px 18px;
   text-align: left;
-}
-
-mat-header-cell {
-  background-color: #e0e0e0;
-  font-weight: bold;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 16px;
   color: #424242;
 }
 
+/* Estilos para el encabezado de la tabla */
+mat-header-cell {
+  background-color: #3f51b5;
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
 mat-row {
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 mat-row:hover {
-  background-color: #f5f5f5;
+  background-color: #f5f7fa;
+  transform: scale(1.01);
 }
 
+/* Acciones */
 .actions button {
   margin-right: 8px;
 }
 
 button[mat-icon-button] {
   color: #3f51b5;
-  transition: transform 0.2s;
+  transition: transform 0.2s, color 0.3s;
 }
 
 button[mat-icon-button]:hover {
   transform: scale(1.1);
+  color: #303f9f;
 }
 
 button[mat-fab] {
-  box-shadow: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
 }
 
+button[mat-fab]:hover {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
 @media (max-width: 600px) {
   .header h2 {
     font-size: 20px;
@@ -75,5 +102,10 @@ button[mat-fab] {
 
   mat-icon {
     font-size: 20px;
+  }
+
+  mat-header-cell, mat-cell {
+    padding: 10px 12px;
+    font-size: 14px;
   }
 }
