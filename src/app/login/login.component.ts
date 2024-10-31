@@ -57,7 +57,7 @@ export class LoginComponent {
       const { correo, contrasena } = this.loginForm.value;
 
       this.http
-        .post('http://127.0.0.1:8000/api/login', { correo, contrasena })
+        .post('http://26.39.90.38:8000/api/login', { correo, contrasena })
         .subscribe({
           next: (response: any) => {
             this.authService.login(response.token, response.rol, response.name);

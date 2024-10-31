@@ -7,7 +7,7 @@ import { Usuario } from '../model/usuarios.model';
   providedIn: 'root'
 })
 export class UsuarioService {
-  private apiUrl = 'http://127.0.0.1:8000/api/register'; // API de Laravel
+  private apiUrl = 'http://26.39.90.38:8000/api/register'; // API de Laravel
 
   constructor(private http: HttpClient) {}
 

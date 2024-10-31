@@ -7,7 +7,7 @@ import { Juego } from '../model/juegos.model';
   providedIn: 'root', // Asegúrate de que esto esté configurado para proporcionar el servicio
 })
 export class JuegoService {
-  private apiUrl = 'http://127.0.0.1:8000/api/juegos'; // Ajusta esto según sea necesario
+  private apiUrl = 'http://26.39.90.38:8000/api/juegos'; // Ajusta esto según sea necesario
 
   constructor(private http: HttpClient) {}
 
